@@ -13,7 +13,7 @@ public class Count {
         String tempIP;
         //数组中为待统计的所有往期原始文件（log-****-**.csv）
         String[] filePathOlds = new String[] {"logs/log-0912-19.csv", "logs/log-0920-26.csv", "logs/log-0927-1003.csv", "logs/log-1004-1008.csv"
-        , "logs/log-1009-1013.csv", "logs/log-1020-1026.csv"};
+        , "logs/log-1009-1013.csv", "logs/log-1020-1026.csv", "logs/log-1027-1031.csv"};
         Map<String, String> records = new HashMap<String, String>();
         CsvReader csvreader_old;
         for(String filePathOld : filePathOlds) {
@@ -28,7 +28,7 @@ public class Count {
             }
         }
         //输出为截止到本期位置的完整历史统计结果
-        String filePathOut = "count/count-till1026.csv";
+        String filePathOut = "count/count-till1031.csv";
             int count = 0;
             CsvWriter csvwriter = new CsvWriter(filePathOut);
             csvwriter.writeRecord(new String[]{"IP","count"});

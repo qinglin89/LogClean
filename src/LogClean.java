@@ -18,7 +18,7 @@ public class LogClean {
         //filePathOlds为往期的输出文件数组，举例：
         //当清洗第三期的原始文件（log-0927-1003.csv）时，该数组中为第一第二期的输出文件（out-log-0912-19.csv, out-log-0920-26.csv）
         String[] filePathOlds = new String[] {"logs/out-log-0912-19.csv", "logs/out-log-0920-26.csv", "logs/out-log-0927-1003.csv"
-        , "logs/out-log-1004-1008.csv", "logs/out-log-1009-1013.csv"};
+        , "logs/out-log-1004-1008.csv", "logs/out-log-1009-1013.csv", "logs/out-log-1020-1026.csv"};
         CsvReader csvreader_old;
         for(String filePathOld : filePathOlds) {
             csvreader_old = new CsvReader(filePathOld);
@@ -29,9 +29,9 @@ public class LogClean {
 //        String filePathOld = "out-test1.csv";
 
         //当前要清洗的原始文件
-        String filePathIn = "logs/log-1020-1026.csv";
+        String filePathIn = "logs/log-1027-1031.csv";
         //当前文件清洗后的输出文件
-        String filePathOut = "logs/out-log-1020-1026.csv";
+        String filePathOut = "logs/out-log-1027-1031.csv";
         CsvReader csvreader = new CsvReader(filePathIn);
         if(csvreader.readHeaders()) {
             int count = 0;
